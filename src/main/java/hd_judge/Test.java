@@ -1,17 +1,14 @@
 package hd_judge;
 
 
+import common.Direction;
+import common.NodeInfo;
+
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-class Point{
-    private int x;
-    private int y;
 
-
-}
-
-public class Problem_3567 {
+public class Test {
 
 
 
@@ -98,6 +95,19 @@ public class Problem_3567 {
 
     }
 
+    /**
+     * 新的计算规则：如果
+     *      如果和目标位置相同，则+2
+     *      如果和目标位置的行相同，但是列不同，则+1
+     *      如果都不同，则+0
+     * @return
+     */
+    public static int cost2(char[][] current, char[][] target){
+
+
+
+    }
+
 
     public static boolean twoDEqual(char[][] t1, char[][] t2){
         for(int i = 0; i < t1.length; i ++){
@@ -122,6 +132,10 @@ public class Problem_3567 {
             }
         }
     }
+
+
+
+
 
 
 
