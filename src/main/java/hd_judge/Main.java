@@ -1,5 +1,8 @@
 package hd_judge;
 
+import common.Direction;
+import common.NodeInfo;
+
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -8,59 +11,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * 输出wrong answer
  */
-class NodeInfo{
-    int x;
-    int y;
-
-    public NodeInfo(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-}
-
-enum Direction{
-    UP(-1, 0, 'u'),
-    DOWN(1, 0, 'd'),
-    LEFT(0, -1, 'l'),
-    RIGHT(0, 1, 'r');
-
-    Direction(int xChange, int yChange) {
-        this.xChange = xChange;
-        this.yChange = yChange;
-    }
-
-    Direction(int xChange, int yChange, char signal) {
-        this.xChange = xChange;
-        this.yChange = yChange;
-        this.signal = signal;
-    }
-
-    public int getxChange() {
-        return xChange;
-    }
-
-    public int getyChange() {
-        return yChange;
-    }
 
 
-    public char getSignal() {
-        return signal;
-    }
-
-    private int xChange;
-    private int yChange;
-    private char signal;
-
-}
 
 public class Main {
 
