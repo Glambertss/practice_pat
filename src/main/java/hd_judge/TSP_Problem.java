@@ -44,9 +44,7 @@ public class TSP_Problem {
                 routesBetweenCity[city1][city2] = fuel;
                 routesBetweenCity[city2][city1] = fuel;
             }
-            final int startCity = 1;
-
-
+            final int currentCity = 1;
 
 
 
@@ -58,10 +56,10 @@ public class TSP_Problem {
     }
 
 
-    public static int minDistance(int currentCity, HashSet<Integer> citiesRemainToVisit){
+ /*   public static int minDistance(int currentCity, HashSet<Integer> citiesRemainToVisit){
         for (Integer cityToVisit : citiesRemainToVisit) {
 
         }
-    }
+    }*/
 
 }
