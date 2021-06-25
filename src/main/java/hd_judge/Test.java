@@ -8,6 +8,21 @@ import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 
+/***
+ * 输入：
+ *      2
+ * 12X453786
+ * 12345678X
+ * 564178X23
+ * 7568X4123
+ *
+ * 输出：
+ * Case 1: 2
+ * dd
+ * Case 2: 8
+ * urrulldr
+ */
+
 public class Test {
 
 
@@ -102,11 +117,13 @@ public class Test {
      *      如果都不同，则+0
      * @return
      */
+/*
     public static int cost2(char[][] current, char[][] target){
 
 
 
     }
+*/
 
 
     public static boolean twoDEqual(char[][] t1, char[][] t2){
