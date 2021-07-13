@@ -1,10 +1,43 @@
+import leetcode.Solution;
+
 public class Test {
     public static void main(String[] args) {
 
-        int zzz = 2223;
-        int yyyy = 0;
+        Solution pattern = new Solution();
+        boolean aab = pattern.isMatch("mississippi",
+                "mis*is*ip*.i");
+        System.out.println("aab = " + aab);
+
+        /*boolean ccd = pattern.isMatch("aaa", "ab*a*c*a");
+        System.out.println("ccd = " + ccd);
+
+        boolean ccd2 = pattern.isMatch("b", "ba*b*");
+        System.out.println("ccd2 = " + ccd2);
+
+
+        boolean ccd3 = pattern.isMatch("a", ".*..a");
+        System.out.println("ccd3 = " + ccd3);*/
+
+
+        /**
+         * "mississippi"
+         * "mis*is*ip*."
+         */
+
+
+        /**
+         * "a"
+         * ".*..a*"
+         */
+
+
 
     }
 
 
+
+
 }
+
+
+
