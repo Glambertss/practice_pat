@@ -136,7 +136,7 @@ public class Solution {
                         }
                     }else{
                         //如果其后面结点是.或者是普通字符的话
-                        node.getPre()
+                        //node.getPre()
                     }
 
 
