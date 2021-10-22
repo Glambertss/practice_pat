@@ -13,8 +13,8 @@ public class Test {
                 "mis*p");
         System.out.println("aab2 = " + aab2);
 
-        boolean ccd = pattern.isMatch("aaa", "ab*a*c*a");
-        System.out.println("ccd = " + ccd);
+/*        boolean ccd = pattern.isMatch("aaa", "ab*a*c*a");
+        System.out.println("ccd = " + ccd);*/
 
         boolean ccd2 = pattern.isMatch("b", "ba*b*");
         System.out.println("ccd2 = " + ccd2);
