@@ -28,7 +28,7 @@ public class KuoHao_Simple {
 
     public static void main(String[] args) {
         KuoHao_Simple kuoHaoSimple = new KuoHao_Simple();
-        List<String> strings = kuoHaoSimple.generateParenthesis(1);
+        List<String> strings = kuoHaoSimple.generateParenthesis(3);
         System.out.println(strings);
 
     }
