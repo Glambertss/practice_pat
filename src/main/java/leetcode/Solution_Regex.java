@@ -35,7 +35,6 @@ public class Solution_Regex {
                         }
                     }else{
                         //如果当前位于第一行
-
                         if(pattern_char[j - 1] == '.' || pattern_char[j - 1] == s_char[i]){
                             judge[i][j] = Math.max(judge[i - 1][j -1], judge[i -1][j]);
                         }else{
