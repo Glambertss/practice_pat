@@ -1,5 +1,4 @@
-import leetcode.Solution;
-import leetcode.Solution_Regex;
+import leetcode.dp.Solution_Regex;
 
 public class Test {
     public static void main(String[] args) {

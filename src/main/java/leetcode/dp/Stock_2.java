@@ -1,4 +1,4 @@
-package leetcode;//
+package leetcode.dp;//
 
 public class Stock_2 {
     public static int maxProfit(int[] prices) {

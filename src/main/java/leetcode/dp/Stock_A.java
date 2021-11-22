@@ -1,4 +1,4 @@
-package leetcode;//
+package leetcode.dp;//
 
 import jdk.nashorn.internal.ir.CallNode;
 

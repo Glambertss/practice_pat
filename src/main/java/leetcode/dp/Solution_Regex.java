@@ -1,4 +1,4 @@
-package leetcode;//
+package leetcode.dp;//
 
 public class Solution_Regex {
     public boolean isMatch(String s, String p) {
@@ -51,8 +51,6 @@ public class Solution_Regex {
             }
             System.out.println();
         }
-
-
 
         return judge[s_char.length -1][pattern_char.length - 1] == 1 ? true: false;
 

@@ -1,8 +1,4 @@
-package leetcode;//
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+package leetcode.dp;//
 
 public class CanJump_Offical {
     public boolean solution(int[] nums){

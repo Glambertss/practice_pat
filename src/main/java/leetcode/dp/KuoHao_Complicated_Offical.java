@@ -1,4 +1,4 @@
-package leetcode;//
+package leetcode.dp;//
 
 public class KuoHao_Complicated_Offical {
     public int solution(String s){

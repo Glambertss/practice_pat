@@ -1,4 +1,4 @@
-package leetcode;//
+package leetcode.dp;//
 
 public class Trap {
     public int solution(int[] height){
