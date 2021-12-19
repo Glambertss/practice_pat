@@ -18,20 +18,6 @@ public class MinDistance_72 {
         int m = word1.length();
         int n = word2.length();
 
-
-        int[][] dp_reference = new int[m + 1][n + 1];
-
-        //求出words1和words2的最长公共子序列，求出
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                dp_reference[i][j] = Math.max(dp_reference[i - 1][j], dp_reference[i][j - 1]);
-                if (words1_char[i] == words2_char[j]
-                        && dp_reference[i - 1][j - 1] + 1 > dp_reference[i][j]) {
-                    dp_reference[i][j] = dp_reference[i - 1][j - 1] + 1;
-                    //将i 和j记录下来
-                }
-            }
-        }
         int[][] dp = new int[m + 1][n + 1];
         for(int i = 0; i <=m ; i ++){
             dp[i][0] = i;
@@ -42,10 +28,12 @@ public class MinDistance_72 {
 
         for(int i = 1; i <= m; i ++){
             for(int j = 1; j <= n; j ++){
-                if((dp_reference[i - 1][j - 1] + 1)== dp_reference[i][j]){
-                    dp[i][j] = dp[i -1][j -1];
+                if( words1_char[i] == words2_char[j]){
+                    dp[i][j] =  1 + Math.min(dp[i -1][j], dp[i][j - 1]);
+                    dp[i][j] = Math.min(dp[i][j], dp[i -1][j -1]);
                 }else{
-                    dp[i][j] = Math.max(dp[i -1][j], dp[i][j -1]);
+                    dp[i][j] =  1 + Math.min(dp[i -1][j], dp[i][j - 1]);
+                    dp[i][j] = Math.min(dp[i][j], dp[i -1][j -1] +  1);
                 }
             }
         }
@@ -56,14 +44,14 @@ public class MinDistance_72 {
 
     public static void main(String[] args) {
         MinDistance_72 minDistance_72 = new MinDistance_72();
-/*         System.out.println(minDistance_72.minDistance("faefartgadfgre","sfeseafatredaf"));
+         System.out.println(minDistance_72.minDistance("faefartgadfgre","sfeseafatredaf"));
         System.out.println(minDistance_72.minDistance("syxstion","szsqtion"));
-        System.out.println(minDistance_72.minDistance("trkitm", "trditm"));*/
+        System.out.println(minDistance_72.minDistance("trkitm", "trditm"));
         System.out.println(minDistance_72.minDistance("intention", "execution"));
-/*        System.out.println(minDistance_72.minDistance("horse", "ros"));
+        System.out.println(minDistance_72.minDistance("horse", "ros"));
         System.out.println(minDistance_72.minDistance("teacher", "etcher"));
         System.out.println(minDistance_72.minDistance("mart", "karma"));
-        System.out.println(minDistance_72.minDistance("sea", "ate"));*/
+        System.out.println(minDistance_72.minDistance("sea", "ate"));
 
     }
 }

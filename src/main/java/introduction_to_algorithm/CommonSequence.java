@@ -29,7 +29,7 @@ public class CommonSequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(common("acdbgachih", "adcgh"));
+        System.out.println(common("acdbg", "adcgh"));
     }
 
 
