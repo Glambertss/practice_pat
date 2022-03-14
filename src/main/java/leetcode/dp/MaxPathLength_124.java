@@ -35,14 +35,14 @@ class TreeNode {
  *      2. 如何解决
  */
 public class MaxPathLength_124 {
-    public int solution(TreeNode root){
-        /**
+  /*  public int solution(TreeNode root){
+        *//**
          * 思路：
          *  通过后序遍历，先查询
-         */
+         *//*
 
 
-    }
+    }*/
 
     public void trace(TreeNode node){
         if(node == null) {
@@ -50,7 +50,6 @@ public class MaxPathLength_124 {
         }
         trace(node.left);
         trace(node.right);
-        int temp
         if(node.left != null){
             if(node.left.left != null || node.left.right == null){
 

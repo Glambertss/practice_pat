@@ -25,11 +25,18 @@ public class CommonSequence {
                 }
             }
         }
+        
+        for(int i = 0; i < s1.length(); i ++){
+            for(int j = 0; j < s2.length(); j ++){
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }
       return A[s1.length() -1][s2.length() -1];
     }
 
     public static void main(String[] args) {
-        System.out.println(common("acdbg", "adcgh"));
+        System.out.println(common("babgbag", "bag"));
     }
 
 

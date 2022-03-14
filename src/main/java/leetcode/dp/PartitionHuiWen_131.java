@@ -1,29 +1,55 @@
 package leetcode.dp;//
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PartitionHuiWen_131 {
-    public List<List<String>> solution(String s){
-        //从s的低位开始寻找切分点，假设切分点是q，那么从s.subString(0, q + 1)是回文串
-        //然后再对余下的进行分割
-        //需要知道s中的前k个字符对应的集合
-        int m = s.length();
-        int dp[] = new int[m];
-        dp[0] = 1;
+    boolean[][] f;
+    List<List<String>> ret = new ArrayList<List<String>>();
+    List<String> ans = new ArrayList<String>();
+    int n;
 
-        for(int i = 1; i < m; i ++ ){
-            //如果s[i]和前面的构成回文串
-            //如果s[i -1]是所在回文串的最后一个
-            for(int k = i - 1 ; k >= 0; k --){
-                //
-
-            }
-
+    public List<List<String>> partition(String s) {
+        n = s.length();
+        f = new boolean[n][n];
+        for (int i = 0; i < n; ++i) {
+            Arrays.fill(f[i], true);
         }
 
+        for (int i = n - 1; i >= 0; --i) {
+            for (int j = i + 1; j < n; ++j) {
+                f[i][j] = (s.charAt(i) == s.charAt(j)) && f[i + 1][j - 1];
+            }
+        }
+
+        dfs(s, 0);
+        return ret;
+    }
+
+    public void dfs(String s, int i) {
+        if (i == n) {
+            ret.add(new ArrayList<String>(ans));
+            return;
+        }
+        for (int j = i; j < n; ++j) {
+            System.out.println("judging i =" + i + ", j =" + j);
+            if (f[i][j]) {
+                System.out.println("succeed i =" + i + ", j=" + j);
+                ans.add(s.substring(i, j + 1));
+
+                dfs(s, j + 1);
+                //System.out.println("removing " + ans.get(ans.size() - 1 ));
+                ans.remove(ans.size() - 1);
+            }
+        }
     }
 
     public static void main(String[] args) {
+        PartitionHuiWen_131 partitionHuiWen_131 = new PartitionHuiWen_131();
+        List<List<String>> aabbcdcb = partitionHuiWen_131.partition("aabbcdcb");
+        System.out.println("aabbcdcb = " + aabbcdcb);
+
 
     }
 }
